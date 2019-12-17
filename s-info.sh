@@ -17,6 +17,13 @@ sleep 0.50
 pkg install wget
 clear
 fi
+cd $PREFIX/bin
+if [ -e figlet ];then
+echo
+else
+pkg install figlet
+pkg install toilet
+fi
 cd /sdcard
 if [ -e S-Media-Info ];then
 echo
@@ -81,6 +88,7 @@ lal="\033[91m"
 hara="\033[32m"
 clear
 echo
+cd ~/S-Media-Info
 figlet Social-Media | $s
 echo
 $likh "	$lal [ 1 ]$hara Instagram
